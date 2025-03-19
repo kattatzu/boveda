@@ -1,0 +1,214 @@
+{
+    "baseUrl": "https://generator.swagger.io/api",
+    "sections": [
+        {
+            "path": "/gen/clients",
+            "name": "clients"
+        },
+        {
+            "path": "/gen/servers",
+            "name": "servers"
+        },
+        {
+            "path": "/gen/download",
+            "name": "gen"
+        }
+    ],
+    "endpoints": [
+        {
+            "method": "GET",
+            "path": "/gen/clients/{language}",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "response": "object",
+            "description": "Returns options for a client library"
+        },
+        {
+            "method": "POST",
+            "path": "/gen/clients/{language}",
+            "headers": {},
+            "query": {},
+            "body": {
+                "spec": "object",
+                "options": "object",
+                "swaggerUrl": "string",
+                "authorizationValue": "AuthorizationValue",
+                "usingFlattenSpec": "boolean",
+                "securityDefinition": "SecuritySchemeDefinition"
+            },
+            "response": "ResponseCode",
+            "description": "Generates a client library"
+        },
+        {
+            "method": "GET",
+            "path": "/gen/download/{fileId}",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "response": "string",
+            "description": "Downloads a pre-generated file"
+        },
+        {
+            "method": "GET",
+            "path": "/gen/servers/{framework}",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "response": "object",
+            "description": "Returns options for a server framework"
+        },
+        {
+            "method": "POST",
+            "path": "/gen/servers/{framework}",
+            "headers": {},
+            "query": {},
+            "body": {
+                "spec": "object",
+                "options": "object",
+                "swaggerUrl": "string",
+                "authorizationValue": "AuthorizationValue",
+                "usingFlattenSpec": "boolean",
+                "securityDefinition": "SecuritySchemeDefinition"
+            },
+            "response": "ResponseCode",
+            "description": "Generates a server library"
+        },
+        {
+            "method": "GET",
+            "path": "/gen/clients",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "response": "array",
+            "description": "Gets languages supported by the client generator"
+        },
+        {
+            "method": "GET",
+            "path": "/gen/servers",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "response": "array",
+            "description": "Gets languages supported by the server generator"
+        }
+    ],
+    "models": [
+        {
+            "name": "ResponseCode",
+            "attributes": [
+                {
+                    "name": "code",
+                    "type": "string",
+                    "description": "File download code"
+                },
+                {
+                    "name": "link",
+                    "type": "string",
+                    "description": "URL for fetching the generated client"
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "AuthorizationValue",
+            "attributes": [
+                {
+                    "name": "value",
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "name": "keyName",
+                    "type": "string"
+                },
+                {
+                    "name": "urlMatcher",
+                    "type": "UrlMatcher"
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "GeneratorInput",
+            "attributes": [
+                {
+                    "name": "spec",
+                    "type": "object"
+                },
+                {
+                    "name": "options",
+                    "type": "object",
+                    "additionalProperties": "string"
+                },
+                {
+                    "name": "swaggerUrl",
+                    "type": "string"
+                },
+                {
+                    "name": "authorizationValue",
+                    "type": "AuthorizationValue"
+                },
+                {
+                    "name": "usingFlattenSpec",
+                    "type": "boolean"
+                },
+                {
+                    "name": "securityDefinition",
+                    "type": "SecuritySchemeDefinition"
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "SecuritySchemeDefinition",
+            "attributes": [
+                {
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "UrlMatcher",
+            "attributes": [],
+            "included": true
+        },
+        {
+            "name": "CliOption",
+            "attributes": [
+                {
+                    "name": "optionName",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "description": "Data type is based on the types supported by the JSON-Schema"
+                },
+                {
+                    "name": "default",
+                    "type": "string"
+                },
+                {
+                    "name": "enum",
+                    "type": "object",
+                    "additionalProperties": "string"
+                }
+            ],
+            "included": true
+        }
+    ]
+}
