@@ -1,0 +1,40 @@
+{
+    "baseUrl": "https://1forge.com/forex-quotes",
+    "sections": [
+        {
+            "path": "/quotes",
+            "name": "quotes"
+        },
+        {
+            "path": "/symbols",
+            "name": "symbols"
+        }
+    ],
+    "endpoints": [
+        {
+            "method": "GET",
+            "path": "/quotes",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "responseType": "",
+            "responseCode": 200
+        },
+        {
+            "method": "GET",
+            "path": "/symbols",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "responseType": "Array<string>",
+            "responseCode": 200
+        }
+    ],
+    "models": [
+        {
+            "name": "Quote",
+            "attributes": [],
+            "included": false
+        }
+    ]
+}

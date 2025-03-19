@@ -1,0 +1,251 @@
+{
+    "baseUrl": "https://www.crcind.com:443/csp/samples/SOAP.Demo.cls",
+    "sections": [
+        {
+            "path": "/SOAP.Demo",
+            "name": "SOAPDemo"
+        }
+    ],
+    "endpoints": [
+        {
+            "method": "POST",
+            "path": "/AddInteger",
+            "headers": {},
+            "query": {},
+            "body": {
+                "Arg1": "int",
+                "Arg2": "int"
+            },
+            "responseType": "int",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/DivideInteger",
+            "headers": {},
+            "query": {},
+            "body": {
+                "Arg1": "int",
+                "Arg2": "int"
+            },
+            "responseType": "int",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/FindPerson",
+            "headers": {},
+            "query": {},
+            "body": {
+                "id": "string"
+            },
+            "responseType": "Person",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/GetByName",
+            "headers": {},
+            "query": {},
+            "body": {
+                "name": "string"
+            },
+            "responseType": "DataSet",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/GetDataSetByName",
+            "headers": {},
+            "query": {},
+            "body": {
+                "name": "string"
+            },
+            "responseType": "ByNameDataSet",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/GetListByName",
+            "headers": {},
+            "query": {},
+            "body": {
+                "name": "string"
+            },
+            "responseType": "PersonIdentification[]",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/LookupCity",
+            "headers": {},
+            "query": {},
+            "body": {
+                "zip": "string"
+            },
+            "responseType": "Address",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/Mission",
+            "headers": {},
+            "query": {},
+            "body": {},
+            "responseType": "string",
+            "responseCode": 200
+        },
+        {
+            "method": "POST",
+            "path": "/QueryByName",
+            "headers": {},
+            "query": {},
+            "body": {
+                "name": "string"
+            },
+            "responseType": "QueryByName_DataSet",
+            "responseCode": 200
+        }
+    ],
+    "models": [
+        {
+            "name": "Person",
+            "attributes": [
+                {
+                    "type": "string",
+                    "name": "Name",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "SSN",
+                    "description": ""
+                },
+                {
+                    "type": "date",
+                    "name": "DOB",
+                    "description": ""
+                },
+                {
+                    "type": "Address",
+                    "name": "Home",
+                    "description": ""
+                },
+                {
+                    "type": "Address",
+                    "name": "Office",
+                    "description": ""
+                },
+                {
+                    "type": "Person",
+                    "name": "Spouse",
+                    "description": ""
+                },
+                {
+                    "type": "string[]",
+                    "name": "FavoriteColors",
+                    "description": ""
+                },
+                {
+                    "type": "int",
+                    "name": "Age",
+                    "description": ""
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "type": "string",
+                    "name": "Title",
+                    "description": ""
+                },
+                {
+                    "type": "int",
+                    "name": "Salary",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "Notes",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "Picture",
+                    "description": ""
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "Address",
+            "attributes": [
+                {
+                    "type": "string",
+                    "name": "Street",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "City",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "State",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "Zip",
+                    "description": ""
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "DataSet",
+            "attributes": [],
+            "included": true
+        },
+        {
+            "name": "ByNameDataSet",
+            "attributes": [],
+            "included": true
+        },
+        {
+            "name": "PersonIdentification",
+            "attributes": [
+                {
+                    "type": "string",
+                    "name": "ID",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "Name",
+                    "description": ""
+                },
+                {
+                    "type": "string",
+                    "name": "SSN",
+                    "description": ""
+                },
+                {
+                    "type": "date",
+                    "name": "DOB",
+                    "description": ""
+                }
+            ],
+            "included": true
+        },
+        {
+            "name": "QueryByName_DataSet",
+            "attributes": [],
+            "included": true
+        }
+    ]
+}

@@ -8,10 +8,6 @@
         {
             "path": "/gen/servers",
             "name": "servers"
-        },
-        {
-            "path": "/gen/download",
-            "name": "gen"
         }
     ],
     "endpoints": [
@@ -21,8 +17,8 @@
             "headers": {},
             "query": {},
             "body": {},
-            "response": "object",
-            "description": "Returns options for a client library"
+            "responseType": "object",
+            "responseCode": 200
         },
         {
             "method": "POST",
@@ -30,15 +26,10 @@
             "headers": {},
             "query": {},
             "body": {
-                "spec": "object",
-                "options": "object",
-                "swaggerUrl": "string",
-                "authorizationValue": "AuthorizationValue",
-                "usingFlattenSpec": "boolean",
-                "securityDefinition": "SecuritySchemeDefinition"
+                "type": "GeneratorInput"
             },
-            "response": "ResponseCode",
-            "description": "Generates a client library"
+            "responseType": "ResponseCode",
+            "responseCode": 200
         },
         {
             "method": "GET",
@@ -46,8 +37,8 @@
             "headers": {},
             "query": {},
             "body": {},
-            "response": "string",
-            "description": "Downloads a pre-generated file"
+            "responseType": "string",
+            "responseCode": 200
         },
         {
             "method": "GET",
@@ -55,8 +46,8 @@
             "headers": {},
             "query": {},
             "body": {},
-            "response": "object",
-            "description": "Returns options for a server framework"
+            "responseType": "object",
+            "responseCode": 200
         },
         {
             "method": "POST",
@@ -64,15 +55,10 @@
             "headers": {},
             "query": {},
             "body": {
-                "spec": "object",
-                "options": "object",
-                "swaggerUrl": "string",
-                "authorizationValue": "AuthorizationValue",
-                "usingFlattenSpec": "boolean",
-                "securityDefinition": "SecuritySchemeDefinition"
+                "type": "GeneratorInput"
             },
-            "response": "ResponseCode",
-            "description": "Generates a server library"
+            "responseType": "ResponseCode",
+            "responseCode": 200
         },
         {
             "method": "GET",
@@ -80,8 +66,8 @@
             "headers": {},
             "query": {},
             "body": {},
-            "response": "array",
-            "description": "Gets languages supported by the client generator"
+            "responseType": "array",
+            "responseCode": 200
         },
         {
             "method": "GET",
@@ -89,8 +75,8 @@
             "headers": {},
             "query": {},
             "body": {},
-            "response": "array",
-            "description": "Gets languages supported by the server generator"
+            "responseType": "array",
+            "responseCode": 200
         }
     ],
     "models": [
@@ -99,13 +85,11 @@
             "attributes": [
                 {
                     "name": "code",
-                    "type": "string",
-                    "description": "File download code"
+                    "type": "string"
                 },
                 {
                     "name": "link",
-                    "type": "string",
-                    "description": "URL for fetching the generated client"
+                    "type": "string"
                 }
             ],
             "included": true
@@ -141,8 +125,7 @@
                 },
                 {
                     "name": "options",
-                    "type": "object",
-                    "additionalProperties": "string"
+                    "type": "object"
                 },
                 {
                     "name": "swaggerUrl",
@@ -195,8 +178,7 @@
                 },
                 {
                     "name": "type",
-                    "type": "string",
-                    "description": "Data type is based on the types supported by the JSON-Schema"
+                    "type": "string"
                 },
                 {
                     "name": "default",
@@ -204,8 +186,7 @@
                 },
                 {
                     "name": "enum",
-                    "type": "object",
-                    "additionalProperties": "string"
+                    "type": "object"
                 }
             ],
             "included": true

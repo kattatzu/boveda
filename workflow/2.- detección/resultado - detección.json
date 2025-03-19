@@ -1,0 +1,14 @@
+{
+    "update": [],
+    "create": [
+        "src/models/person.model.ts",
+        "src/models/employee.model.ts",
+        "src/models/address.model.ts",
+        "src/models/dataset.model.ts",
+        "src/models/byname-dataset.model.ts",
+        "src/models/person-identification.model.ts",
+        "src/models/query-by-name-dataset.model.ts",
+        "src/services/soap-demo.service.ts",
+        "src/apis/soap-demo.api.ts"
+    ]
+}

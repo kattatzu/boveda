@@ -1,21 +1,5 @@
 Identificación Swagger
 ---
-Esta es la estructura de mi proyecto Typescript:
-
-```
-src/config/auth.config.ts 
-src/config/brand.config.ts 
-src/models/[ej. order.model.ts] 
-src/sections/[ej. orders.section.ts] 
-src/services/brand.http-client.ts 
-src/brand.client.ts 
-package.json 
-```
-
-## Información del proyecto 
-- El proyecto esta desarrollado con Typescript 
-- Utiliza Retrofit para generar la conexión al API 
-
 ## Swagger JSON 
 Te pasaré el archivo JSON de Swagger para que identifiques: secciones métodos parámetros y respuestas.
 Con esa información debes generar los modelos, secciones, servicios y otros archivos del SDK. 
@@ -44,10 +28,16 @@ Cuando tengas toda la información requerida responde en formato JSON siguiendo 
         "headers": {}, 
         "query": {}, 
         "body": {}, 
+        "responseType": "",
+        "responseCode": 201 // ejemplo
     }], 
     "models": [{ 
         name: "", 
-        attributes: [], 
+        attributes: [{
+            "type": "string ¡ int ¡ double ¡ char ¡ boolean ¡ date ¡ datetime | any[] | unknown",
+            "name": "",
+            "description": ""
+        }], 
         included: false
     }] 
 } 
