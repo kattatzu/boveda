@@ -32,7 +32,25 @@ Con esa información debes generar los modelos, secciones, servicios y otros arc
 Cuando tengas toda la información requerida responde en formato JSON siguiendo la siguiente 
 
 ```
-{ "baseUrl": "", "sections": [{ "path": "", "name": "" }], "endpoints": [{ "method": "GET | POST | PUT | PATCH", "path": "", "headers": {}, "query": {}, "body": {}, }], "models": [{ name: "", attributes: [], included: false }] } 
+{ 
+    "baseUrl": "", 
+    "sections": [{ 
+        "path": "", 
+        "name": "" 
+    }], 
+    "endpoints": [{ 
+        "method": "GET | POST | PUT | PATCH", 
+        "path": "", 
+        "headers": {}, 
+        "query": {}, 
+        "body": {}, 
+    }], 
+    "models": [{ 
+        name: "", 
+        attributes: [], 
+        included: false
+    }] 
+} 
 ```
 
 Solo debes responder con un JSON válido, no escribas nada más, ni comentarios ni explicaciones, solo el JSON.
